@@ -24,9 +24,6 @@ const DetailtLayout = ({ children }: { children: ReactNode }) => {
     if (thisPathname?.includes("/listing-stay-detail")) {
       return listingStayImageGallery;
     }
-    if (thisPathname?.includes("/listing-car-detail")) {
-      return listingCarImageGallery;
-    }
     if (thisPathname?.includes("/listing-experiences-detail")) {
       return listingExperienceImageGallery;
     }

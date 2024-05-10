@@ -4,7 +4,6 @@ import React, { Fragment, FC, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import NcInputNumber from "@/components/NcInputNumber";
 import { UserPlusIcon } from "@heroicons/react/24/outline";
-import ClearDataButton from "@/app/(client-components)/(HeroSearchForm)/ClearDataButton";
 import { GuestsObject } from "@/app/(client-components)/type";
 
 export interface GuestsInputProps {
@@ -63,15 +62,7 @@ const GuestsInput: FC<GuestsInputProps> = ({ className = "flex-1" }) => {
                 </span>
               </div>
 
-              {!!totalGuests && open && (
-                <ClearDataButton
-                  onClick={() => {
-                    setGuestAdultsInputValue(0);
-                    setGuestChildrenInputValue(0);
-                    setGuestInfantsInputValue(0);
-                  }}
-                />
-              )}
+             
             </Popover.Button>
           </div>
 

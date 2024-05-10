@@ -6,9 +6,6 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import ButtonSubmit from "./ButtonSubmit";
 import { useTimeoutFn } from "react-use";
-import StaySearchForm from "./(stay-search-form)/StaySearchForm";
-import CarsSearchForm from "./(car-search-form)/CarsSearchForm";
-import FlightSearchForm from "./(flight-search-form)/FlightSearchForm";
 
 const HeroSearchForm2Mobile = () => {
   const [showModal, setShowModal] = useState(false);
@@ -113,26 +110,10 @@ const HeroSearchForm2Mobile = () => {
                       </Tab.List>
                       <div className="flex-1 pt-3 px-1.5 sm:px-4 flex overflow-hidden">
                         <Tab.Panels className="flex-1 overflow-y-auto hiddenScrollbar py-4">
-                          <Tab.Panel>
-                            <div className="transition-opacity animate-[myblur_0.4s_ease-in-out]">
-                              <StaySearchForm />
-                            </div>
-                          </Tab.Panel>
-                          <Tab.Panel>
-                            <div className="transition-opacity animate-[myblur_0.4s_ease-in-out]">
-                              <StaySearchForm />
-                            </div>
-                          </Tab.Panel>
-                          <Tab.Panel>
-                            <div className="transition-opacity animate-[myblur_0.4s_ease-in-out]">
-                              <CarsSearchForm />
-                            </div>
-                          </Tab.Panel>
-                          <Tab.Panel>
-                            <div className="transition-opacity animate-[myblur_0.4s_ease-in-out]">
-                              <FlightSearchForm />
-                            </div>
-                          </Tab.Panel>
+                          
+                          
+                          
+                          
                         </Tab.Panels>
                       </div>
                       <div className="px-4 py-3 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700 flex justify-between">
