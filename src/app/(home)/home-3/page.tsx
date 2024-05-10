@@ -1,11 +1,8 @@
 import React from "react";
-import SectionSubscribe2 from "@/components/SectionSubscribe2";
-import BackgroundSection from "@/components/BackgroundSection";
+
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 import { TaxonomyType } from "@/data/types";
-import SectionGridAuthorBox from "@/components/SectionGridAuthorBox";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
-import SectionHero3 from "@/app/(server-components)/SectionHero3";
+
 import CardCategory6 from "@/components/CardCategory6";
 import SectionGridFeaturePlaces from "@/components/SectionGridFeaturePlaces";
 
@@ -63,11 +60,6 @@ function PageHome3() {
       {/* GLASSMOPHIN */}
       <BgGlassmorphism />
 
-      {/* SECTION HERO */}
-      <div className="container px-1 sm:px-4 mb-24 ">
-        <SectionHero3 className="" />
-      </div>
-
       <div className="container relative space-y-24 mb-24 ">
         {/* SECTION 1 */}
         <div className="grid grid-cols-12 gap-6">
@@ -83,19 +75,8 @@ function PageHome3() {
           </div>
         </div>
 
-        {/* SECTION */}
-        <SectionGridCategoryBox />
-
-        {/* SECTION */}
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionGridAuthorBox boxCard="box2" />
-        </div>
-
         <SectionGridFeaturePlaces />
 
-        {/* SECTION */}
-        <SectionSubscribe2 />
       </div>
     </main>
   );

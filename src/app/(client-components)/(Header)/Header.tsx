@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import MainNav1 from "./MainNav1";
+import MainNav1 from "./MainNav";
 import MainNav2 from "./MainNav2";
 
 export interface HeaderProps {
@@ -7,15 +7,13 @@ export interface HeaderProps {
   className?: string;
 }
 
-const Header: FC<HeaderProps> = ({ navType = "MainNav1", className = "" }) => {
+const Header: FC<HeaderProps> = ({ navType = "MainNav", className = "" }) => {
   const renderNav = () => {
     switch (navType) {
       case "MainNav1":
         return <MainNav1 />;
       case "MainNav2":
         return <MainNav2 />;
-      default:
-        return <MainNav1 />;
     }
   };
 

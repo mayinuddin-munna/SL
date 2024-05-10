@@ -9,7 +9,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { PathName } from "@/routers/types";
 import Link from "next/link";
 import Header from "./Header";
-import Header3 from "./Header3";
+
 import { usePathname } from "next/navigation";
 import { useThemeMode } from "@/utils/useThemeMode";
 
@@ -36,14 +36,14 @@ const PAGES_HIDE_HEADER_BORDER: PathName[] = [
 const SiteHeader = () => {
   const anchorRef = useRef<HTMLDivElement>(null);
 
-  let [headers] = useState<SiteHeaders[]>(["Header 1", "Header 2", "Header 3"]);
+  let [headers] = useState<SiteHeaders[]>(["Header 1"]);
 
   let [homePages] = useState<HomePageItem[]>([
     { name: "Travel", slug: "/" },
     { name: "Real Estate", slug: "/home-2" },
     { name: "Booking", slug: "/home-3" },
   ]);
-  const [headerSelected, setHeaderSelected] = useState<SiteHeaders>("Header 2");
+  const [headerSelected, setHeaderSelected] = useState<SiteHeaders>("Header 1");
 
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
@@ -152,12 +152,13 @@ const SiteHeader = () => {
                   <Popover.Panel className="absolute right-0 z-10 mt-3 w-screen max-w-sm">
                     <div className="rounded-2xl bg-white dark:bg-neutral-800 overflow-hidden nc-custom-shadow-1">
                       <div className="relative p-6">
-                        <span className="text-xl font-semibold">Customize</span>
+                        <span className="text-xl font-semibold">
+                          Customized
+                        </span>
                         <div className="w-full border-b border-neutral-200 dark:border-neutral-700 mt-4"></div>
                         {renderRadioHeaders()}
                         {renderRadioHomePages()}
                       </div>
-                    
                     </div>
                   </Popover.Panel>
                 </Transition>
@@ -178,13 +179,6 @@ const SiteHeader = () => {
     }
     switch (headerSelected) {
       case "Header 1":
-        return <Header className={headerClassName} navType="MainNav1" />;
-      case "Header 2":
-        return <Header className={headerClassName} navType="MainNav2" />;
-      case "Header 3":
-        return <Header3 className={headerClassName} />;
-
-      default:
         return <Header className={headerClassName} navType="MainNav1" />;
     }
   };
