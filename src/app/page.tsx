@@ -1,80 +1,12 @@
 import React from "react";
-
-import BgGlassmorphism from "@/components/BgGlassmorphism";
 import { TaxonomyType } from "@/data/types";
-
-import SectionGridFeaturePlaces from "@/components/SectionGridFeaturePlaces";
-
-const DEMO_CATS: TaxonomyType[] = [
-  {
-    id: "1",
-    href: "/listing-stay-map",
-    name: "New Yourk",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-  },
-  {
-    id: "2",
-    href: "/listing-stay-map",
-    name: "Singapore",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-  {
-    id: "3",
-    href: "/listing-stay-map",
-    name: "Paris",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-  {
-    id: "4",
-    href: "/listing-stay-map",
-    name: "London",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-  },
-  {
-    id: "5",
-    href: "/listing-stay-map",
-    name: "Tokyo",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-  },
-  {
-    id: "6",
-    href: "/listing-stay-map",
-    name: "Maldives",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-  {
-    id: "7",
-    href: "/listing-stay-map",
-    name: "Italy",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-];
+import SectionGridFeatureProperty from "./(home)/SectionGridFeatureProperty";
+import CardCategory6 from "@/components/CardCategory6";
 
 const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "1",
-    href: "/listing-stay-map",
+    href: "/listing-real-estate",
     name: "Enjoy the great cold",
     taxonomy: "category",
     count: 188288,
@@ -83,7 +15,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "2",
-    href: "/listing-stay-map",
+    href: "/listing-real-estate",
     name: "Sleep in a floating way",
     taxonomy: "category",
     count: 188288,
@@ -92,7 +24,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "3",
-    href: "/listing-stay-map",
+    href: "/listing-real-estate",
     name: "In the billionaire's house",
     taxonomy: "category",
     count: 188288,
@@ -101,7 +33,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "4",
-    href: "/listing-stay-map",
+    href: "/listing-real-estate",
     name: "Cool in the deep forest",
     taxonomy: "category",
     count: 188288,
@@ -110,7 +42,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "5",
-    href: "/listing-stay-map",
+    href: "/listing-real-estate",
     name: "In the billionaire's house",
     taxonomy: "category",
     count: 188288,
@@ -119,34 +51,44 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "6",
-    href: "/listing-stay-map",
+    href: "/listing-real-estate",
+    name: "Sleep in a floating way",
+    taxonomy: "category",
+    count: 188288,
+    thumbnail:
+      "https://images.pexels.com/photos/2869499/pexels-photo-2869499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  },
+  {
+    id: "7",
+    href: "/listing-real-estate",
     name: "In the billionaire's house",
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/9828170/pexels-photo-9828170.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-  },
-  {
-    id: "7",
-    href: "/listing-stay-map",
-    name: "Cool in the deep forest",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
 ];
 
 function PageHome() {
   return (
     <main className="nc-PageHome relative overflow-hidden">
-      {/* GLASSMOPHIN */}
-      <BgGlassmorphism />
-
+      {/* SECTION HERO */}
       <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
-        {/* SECTION HERO */}
-
-        <SectionGridFeaturePlaces cardType="card2" />
+        <div className="relative py-16">
+          <SectionGridFeatureProperty />
+        </div>
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-12 sm:col-span-6 lg:col-span-4 flex">
+            <CardCategory6 taxonomy={DEMO_CATS_2[0]} />
+          </div>
+          <div className="col-span-12 sm:col-span-6 lg:col-span-4 grid grid-rows-2 gap-6">
+            <CardCategory6 taxonomy={DEMO_CATS_2[3]} />
+            <CardCategory6 taxonomy={DEMO_CATS_2[1]} />
+          </div>
+          <div className="col-span-12 sm:col-span-6 lg:col-span-4 flex">
+            <CardCategory6 taxonomy={DEMO_CATS_2[4]} />
+          </div>
+        </div>
       </div>
     </main>
   );

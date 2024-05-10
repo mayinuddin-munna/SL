@@ -1,6 +1,4 @@
 "use client";
-
-
 import ListingImageGallery from "@/components/listing-image-gallery/ListingImageGallery";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { ReactNode } from "react";
