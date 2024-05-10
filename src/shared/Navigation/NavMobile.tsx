@@ -5,23 +5,18 @@ import ButtonClose from "@/shared/ButtonClose";
 import Logo from "@/shared/Logo";
 import { Disclosure } from "@headlessui/react";
 import { NavItemType } from "./NavigationItem";
-import { NAVIGATION_DEMO } from "@/data/navigation";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import SocialsList from "@/shared/SocialsList";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import SwitchDarkMode from "@/shared/SwitchDarkMode";
 import Link from "next/link";
 
-
 export interface NavMobileProps {
   data?: NavItemType[];
   onClickClose?: () => void;
 }
 
-const NavMobile: React.FC<NavMobileProps> = ({
-  data = NAVIGATION_DEMO,
-  onClickClose,
-}) => {
+const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
   const _renderMenuChild = (item: NavItemType) => {
     return (
       <ul className="nav-mobile-sub-menu pl-6 pb-1 text-base">
@@ -124,9 +119,9 @@ const NavMobile: React.FC<NavMobileProps> = ({
           <ButtonClose onClick={onClickClose} />
         </span>
       </div>
-      <ul className="flex flex-col py-6 px-2 space-y-1">
+      {/* <ul className="flex flex-col py-6 px-2 space-y-1">
         {data.map(_renderItem)}
-      </ul>
+      </ul> */}
       <div className="flex items-center justify-between py-6 px-5">
         <a
           className="inline-block"
@@ -136,8 +131,6 @@ const NavMobile: React.FC<NavMobileProps> = ({
         >
           <ButtonPrimary>Get Template</ButtonPrimary>
         </a>
-
-        
       </div>
     </div>
   );

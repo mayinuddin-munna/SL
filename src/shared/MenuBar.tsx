@@ -12,20 +12,20 @@ const MenuBar: React.FC<MenuBarProps> = ({
   className = "p-2.5 rounded-lg text-neutral-700 dark:text-neutral-300",
   iconClassName = "h-8 w-8",
 }) => {
-  const [isVisable, setIsVisable] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const pathname = usePathname();
 
   useEffect(() => {
-    setIsVisable(false);
+    setIsVisible(false);
   }, [pathname]);
 
-  const handleOpenMenu = () => setIsVisable(true);
-  const handleCloseMenu = () => setIsVisable(false);
+  const handleOpenMenu = () => setIsVisible(true);
+  const handleCloseMenu = () => setIsVisible(false);
 
   const renderContent = () => {
     return (
-      <Transition appear show={isVisable} as={Fragment}>
+      <Transition appear show={isVisible} as={Fragment}>
         <Dialog
           as="div"
           className="relative z-50 overflow-hidden"

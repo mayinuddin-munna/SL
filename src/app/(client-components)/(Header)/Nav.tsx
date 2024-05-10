@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Logo from "@/shared/Logo";
-import Navigation from "@/shared/Navigation/Navigation";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import MenuBar from "@/shared/MenuBar";
 import SwitchDarkMode from "@/shared/SwitchDarkMode";
@@ -16,7 +15,7 @@ const Nav: FC<MainNav1Props> = ({ className = "" }) => {
       <div className="px-4 lg:container h-20 relative flex justify-between">
         <div className="hidden md:flex justify-start flex-1 space-x-4 sm:space-x-10">
           <Logo className="w-24 self-center" />
-          <Navigation />
+         
         </div>
 
         <div className="flex lg:hidden flex-[3] max-w-lg !mx-auto md:px-3 ">
