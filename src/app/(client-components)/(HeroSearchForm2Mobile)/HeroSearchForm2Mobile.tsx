@@ -13,7 +13,7 @@ const HeroSearchForm2Mobile = () => {
   // FOR RESET ALL DATA WHEN CLICK CLEAR BUTTON
   const [showDialog, setShowDialog] = useState(false);
   let [, , resetIsShowingDialog] = useTimeoutFn(() => setShowDialog(true), 1);
-  //
+
   function closeModal() {
     setShowModal(false);
   }
@@ -31,7 +31,7 @@ const HeroSearchForm2Mobile = () => {
         <MagnifyingGlassIcon className="flex-shrink-0 w-5 h-5" />
 
         <div className="ml-3 flex-1 text-left overflow-hidden">
-          <span className="block font-medium text-sm">Where to?</span>
+          <span className="block font-medium text-sm">Where to? dsfsf</span>
           <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 ">
             <span className="line-clamp-1">
               Anywhere • Any week • Add guests
@@ -109,12 +109,7 @@ const HeroSearchForm2Mobile = () => {
                         )}
                       </Tab.List>
                       <div className="flex-1 pt-3 px-1.5 sm:px-4 flex overflow-hidden">
-                        <Tab.Panels className="flex-1 overflow-y-auto hiddenScrollbar py-4">
-                          
-                          
-                          
-                          
-                        </Tab.Panels>
+                        <Tab.Panels className="flex-1 overflow-y-auto hiddenScrollbar py-4"></Tab.Panels>
                       </div>
                       <div className="px-4 py-3 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700 flex justify-between">
                         <button

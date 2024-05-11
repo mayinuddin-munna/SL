@@ -4,8 +4,6 @@ import React, { useRef } from "react";
 import { useThemeMode } from "@/utils/useThemeMode";
 import MainNav from "./Nav";
 
-export type SiteHeaders = "Header 1";
-
 const SiteHeader = () => {
   const anchorRef = useRef<HTMLDivElement>(null);
  
